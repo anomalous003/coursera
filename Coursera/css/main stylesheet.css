@@ -409,6 +409,10 @@ div.trasnscript_toolbar .translate a{
   margin-top: 16px;
 }
 
+div.trasnscript_toolbar .translate a:hover{
+  text-decoration: underline;
+}
+
 /*showing language box when checked*/
 #select_language:checked ~ * div.language_box{
   display: block;
