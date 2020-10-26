@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>03-01 Pseudo Classes and Elements - University of Michigan | Coursera</title>
+    <link rel="icon" type="image/icon" href="favicon.ico">
+    <link rel="stylesheet" href="css\fontawsome\css\all.css">
+    <link rel="stylesheet" href="css\defult stylesheet.css">
+    <link rel="stylesheet" href="css\header stylesheet.css">
+    <link rel="stylesheet" href="css\main stylesheet.css">
+  </head>
+
+  <body>
+    <input type="checkbox" id="toggle-sidebar">
+    <input type="checkbox" id="toggle-notes">
+    <input type="checkbox" id="select_language">
+
+    <header>
+      <a tabindex="1" href="https://www.coursera.org/" class="coursera">
+        <img class="coursera-logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgogICB3aWR0aD0iMTA4cHgiIGhlaWdodD0iMTdweCIgdmlld0JveD0iMCAwIDEwOCAxNyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTA4IDE3IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iIzJBNzNDQyIgZD0iTTU0LjI4MSw1Ljc3M2MwLjA2Ni0xLjI2OSwwLjUyMS0yLjMwNiwxLjIzMi0zLjExNVYxLjU4aC0wLjk0NWMtMS45MSwwLTMuNTI3LDAuNzMyLTQuNDY3LDIuMzg2aC0wLjA1NQogIFYxLjc2MmgtNC44OTl2MTMuNDQxaDQuOVY5Ljc3N2MwLTIuMzAzLDAuNjc0LTQuMDU5LDMuMzkzLTQuMDU5QzUzLjczNiw1LjcyLDU0LjAxMyw1LjczNyw1NC4yODEsNS43NzN6Ii8+CjxwYXRoIGZpbGw9IiMyQTczQ0MiIGQ9Ik05MS4zOCw1LjcyNGMwLjQwNy0xLjE4OCwxLjA2Ny0yLjI0NiwxLjkyNS0zLjA5NXYtMS4wNWgtMC45NDNjLTEuOTExLDAtMy41MjYsMC43MzItNC40NzEsMi4zODVoLTAuMDUzCiAgVjEuNzYyaC00LjkwMnYxMy40NDFoNC45MDJWOS43NzdjMC0yLjMwMywwLjY3Ni00LjA1OSwzLjM5NS00LjA1OUw5MS4zOCw1LjcyNHoiLz4KPHBhdGggZmlsbD0iIzJBNzNDQyIgZD0iTTY0LjIzMiw1LjIyYy0wLjc1Ni0wLjM5My0xLjgwOC0wLjY1NS0yLjY0NS0wLjY1NWMtMC41NjIsMC0xLjUzMywwLjIzNC0xLjUzMywwLjkxNwogIGMwLDAuOTE4LDEuNTMzLDEuMDQ4LDIuMjExLDEuMTgyYzIuMjg0LDAuNDQ0LDQuMDEyLDEuNDkzLDQuMDEyLDMuOTc5YzAsMy41MzYtMy4zMTMsNS4wMDgtNi41Miw1LjAwOAogIGMtMS45NjcsMC0zLjkwMi0wLjU1MS01LjU3NC0xLjU0N2wxLjc3Ny0zLjMzYzAuOTk1LDAuNjg0LDIuNjY1LDEuMzYzLDMuODc3LDEuMzYzYzAuNjIsMCwxLjUzNS0wLjI4NywxLjUzNS0xLjAyMQogIGMwLTEuMDQ4LTEuNTM1LTEuMTAzLTMuMDcyLTEuNDk1Yy0xLjUzMy0wLjM5My0zLjA2Ni0xLjEyNS0zLjA2Ni0zLjUzNmMwLTMuMzAyLDMuMDY2LTQuNzY3LDYuMDg4LTQuNzY3CiAgYzEuNTYyLDAsMy4xMjUsMC4yMzUsNC41NDksMC44NjRMNjQuMjMyLDUuMjJ6Ii8+CjxwYXRoIGZpbGw9IiMyQTczQ0MiIGQ9Ik0xMDgsMTUuMjAzaC00Ljl2LTEuNDk1aC0wLjA1NGMtMC44NjIsMS4zMzYtMi41NjIsMS45MzgtNC4xNzUsMS45MzhjLTQuMDk2LDAtNi45NzUtMy4zMjgtNi45NzUtNy4xOAogIGMwLTMuODQ4LDIuODI4LTcuMTUxLDYuOTItNy4xNTFjMS41ODgsMCwzLjI2LDAuNTc2LDQuMjgzLDEuNzU0VjEuNzYyaDQuODk5TDEwOCwxNS4yMDNMMTA4LDE1LjIwM3ogTTk2Ljk1OSw4LjQ5NQogIGMwLDEuNzAyLDEuMTYsMy4wMTIsMy4xNSwzLjAxMmMxLjk5MiwwLDMuMTQ3LTEuMzA4LDMuMTQ3LTMuMDEyYzAtMS42NTEtMS4xNTUtMy4wMzktMy4xNDctMy4wMzkKICBDOTguMTE5LDUuNDU3LDk2Ljk1OSw2Ljg0NCw5Ni45NTksOC40OTV6Ii8+CjxwYXRoIGZpbGw9IiMyQTczQ0MiIGQ9Ik04Mi4xNjMsOS4yODNINzEuODQ2YzAsMS45MzcsMS4wNTMsMi45ODQsMy4wNzIsMi45ODRjMS4wNSwwLDEuODAzLTAuMzM5LDIuMzQzLTEuMjMxaDQuNzE0CiAgYy0wLjc4MSwzLjE3MS0zLjg3OSw0LjYxMi03LjAyOSw0LjYxMmMtNC41NzUsMC03Ljk5NS0yLjUxNy03Ljk5NS03LjE1MmMwLTQuNDgsMy4xNDctNy4xNzgsNy42NDQtNy4xNzgKICBjNC43OTMsMCw3LjU3LDIuODgzLDcuNTcsNy40NjZMODIuMTYzLDkuMjgzTDgyLjE2Myw5LjI4M3ogTTc3LjYxMSw2LjUzYy0wLjI0My0xLjI4NC0xLjQ1NS0yLjEyMi0yLjc3My0yLjEyMgogIGMtMS40MjksMC0yLjYwOSwwLjczMS0yLjkxLDIuMTIySDc3LjYxMXoiLz4KPGc+CiAgPGc+CiAgICA8cGF0aCBmaWxsPSIjMkE3M0NDIiBkPSJNMjkuNTYxLDguMjYxYy0wLjAwNS0wLjExNi0wLjAxMy0wLjIyOS0wLjAyMi0wLjM0NGMwLDAsMC0wLjAwMSwwLTAuMDAyYzAsMCwwLTAuMDAxLDAtMC4wMDIKICAgICAgYy0wLjExLTEuMjQ3LTAuNTIyLTIuNDE0LTEuMjIxLTMuNDY4Yy0wLjMxMi0wLjQ3LTAuNjY5LTAuODk3LTEuMDY4LTEuMjhjLTAuNTgzLTAuNTYxLTEuMjU4LTEuMDI1LTIuMDE5LTEuMzkyCiAgICAgIGMtMS4xNDUtMC41NDctMi40MS0wLjgyMy0zLjc2LTAuODIzYy0wLjEzMiwwLTAuMjcsMC4wMDItMC40MDksMC4wMDdDMjAuMTE0LDEsMTkuMTk3LDEuMTgsMTguMzM1LDEuNDk3CiAgICAgIGMtMC44NjksMC4zMTQtMS42MjYsMC43MjktMi4yNDUsMS4yMjdjLTAuMTI2LDAuMS0wLjI2MywwLjIyMy0wLjQxLDAuMzU4bC0wLjEwNiwwLjEwNEwxNS40MjksMy4zNGgwLjAwMWgwLjAwMWwtMC4wNjgsMC4wNjcKICAgICAgTDE1LjMzLDMuNDQzbC0wLjE3MywwLjE4MmMtMC4xMjgsMC4xNDQtMC4yNSwwLjI4OC0wLjM2NCwwLjQyOWwtMC4wMDEtMC4wMDJsLTAuMDA0LTAuMDA0Yy0wLjIzNywwLjI4OC0wLjQ1NiwwLjU4Ni0wLjYxNywwLjg1NAogICAgICBjLTAuMTA5LDAuMTcyLTAuMjE2LDAuMzQ5LTAuMzE4LDAuNTI2TDEyLjQ0LDguMjg1bDAuMDAyLDAuMDAybC0wLjA3NCwwLjE0NWwtMC4xNTYsMC4zMTZjLTAuMzEsMC42MjctMC42NDIsMS4yNTItMS4wMTMsMS43NjgKICAgICAgYy0wLjgyNywwLjkwNy0xLjc2MiwxLjM1MS0yLjk2NCwxLjM1MWMtMC4wODQsMC0wLjE3LTAuMDA0LTAuMjU4LTAuMDA5Yy0wLjcyNC0wLjAyOS0xLjM0NS0wLjItMS44OTYtMC41MjYKICAgICAgYy0wLjA1OS0wLjAzNS0wLjExNi0wLjA3MS0wLjE3MS0wLjEwOGMtMC40NS0wLjI5OS0wLjc5NS0wLjY4My0xLjA1My0xLjE2MmMtMC4yOTEtMC41NDMtMC40Mi0xLjA5OC0wLjQwMi0xLjY4NgogICAgICBDNC40NTYsOC4zNiw0LjQ1Nyw4LjM0Niw0LjQ1Nyw4LjMzM0M0LjQ5Niw3LjM5Nyw0Ljg1Myw2LjY2OSw1LjU3Miw2LjA0QzUuNzQ3LDUuODg5LDUuOTMsNS43NjEsNi4xMjEsNS42NDcKICAgICAgYzAuMDI3LTAuMDE2LDAuMDU0LTAuMDMxLDAuMDgxLTAuMDQ1YzAuNTM0LTAuMjkxLDEuMTQyLTAuNDM2LDEuODM5LTAuNDM2bDAuMjE3LDAuMDA2QzkuMzY1LDUuMjE0LDEwLjIxOSw1LjU2LDEwLjksNi4yMzUKICAgICAgTDEzLjAzNiwyLjRjLTAuNTExLTAuMzQyLTEuMDg4LTAuNjM2LTEuNzI0LTAuODc1Yy0wLjAyNC0wLjAwOS0wLjA0OS0wLjAxOS0wLjA3NC0wLjAyN2MtMC4wNzYtMC4wMjctMC4xNTEtMC4wNTUtMC4yMjktMC4wOAogICAgICBDMTAuMzMzLDEuMTkyLDkuNjI0LDEuMDUzLDguODk0LDAuOTlsMCwwQzguODc2LDAuOTg3LDguODU2LDAuOTg1LDguODM4LDAuOTgzQzguNzI2LDAuOTc2LDguNjEyLDAuOTYyLDguNSwwLjk1NwogICAgICBDOC4zNzgsMC45NTIsOC4yNTUsMC45NSw4LjEzNSwwLjk0OUg4LjA2NmMtMS4zNDMsMC4wMDUtMi41OTEsMC4yOC0zLjczMiwwLjgyNUMzLjA1NiwyLjM5LDIuMDIsMy4yODcsMS4yNTIsNC40NDMKICAgICAgQzAuNDg2LDUuNTk5LDAuMDY4LDYuODgyLDAuMDA4LDguMjU5QzAuMDAzLDguMzc3LDAsOC40OTQsMCw4LjYwOWMtMC4wMDEsMS45MjYsMC43MDEsMy42MiwyLjA5Nyw1LjA0MgogICAgICBjMS40NTcsMS40OTIsMy4zNTIsMi4yOTYsNS42MjcsMi4zOTFjMC4xNDYsMC4wMDYsMC4yOSwwLjAxLDAuNDM0LDAuMDFjMS4yODcsMCwyLjQ3OC0wLjIyOSwzLjU0Ni0wLjY4NwogICAgICBjMC4yNjctMC4xMTQsMC41MjYtMC4yNDgsMC43OTEtMC4zOTdjMC4xNDQtMC4wODMsMC4yOC0wLjE3MSwwLjQxNS0wLjI2NWwwLjEtMC4wNjdsMC4xNjgtMC4xMTUKICAgICAgYzAuMjAyLTAuMTQ1LDAuMzkxLTAuMzAyLDAuNTc1LTAuNDY5bDAuMDY0LTAuMDYxYzAuMTA4LTAuMTAzLDAuMjE2LTAuMjA3LDAuMzE4LTAuMzE0bDAuMzgzLTAuNDMzbDAuMTQ2LTAuMTgzbDAuMDY4LTAuMQogICAgICBsMC4wNjgtMC4wOThjMC41NjktMC45NTYsMi40MjEtNC40MzUsMi40MjEtNC40MzVWOC40MjFsMC4xMS0wLjIxMmwwLjA5Mi0wLjE2NmMwLjI3My0wLjQ5NywwLjQ3LTAuODUsMC43MzEtMS4yMjFsMC4wMDctMC4wMTEKICAgICAgYzAuNjA5LTAuODgzLDEuNjU2LTEuNTEyLDIuODktMS42MThjMi4wNy0wLjE3OCwzLjg4NCwxLjE4Miw0LjA1MSwzLjAzOGMwLjE2NiwxLjg1Ni0xLjM3OCwzLjUwNS0zLjQ0OCwzLjY4NAogICAgICBjLTAuNDMxLDAuMDM3LTAuODUsMC4wMDgtMS4yNDUtMC4wNzlsLTAuMDEsMC4wMDRjLTEuNTE5LTAuMzE2LTIuNDg2LTEuNDI0LTIuOTYzLTEuOTE5bC0xLjk5MiwzLjY2MwogICAgICBjMCwwLDAuNjE5LDAuNjI0LDEuMDQzLDAuOTM2YzAuNDI1LDAuMzExLDAuOTc0LDAuNjE3LDEuNDEyLDAuODA3YzEuMDYzLDAuNDU0LDIuMjE5LDAuNzI2LDMuNDk2LDAuNzI2CiAgICAgIGMwLjE0OCwwLDAuMTE4LDAsMC4yNzItMC4wMDZjMi4yNzMtMC4wOTUsNC4yOTktMC45NjYsNS43Ni0yLjQ1OGMxLjM4NC0xLjQxNywyLjEzNS0zLjAzNSwyLjE0Mi00Ljk1VjguNTgyCiAgICAgIEMyOS41NjgsOC40NzYsMjkuNTY1LDguMzY5LDI5LjU2MSw4LjI2MXoiLz4KICA8L2c+CjwvZz4KPGc+CiAgPHBhdGggZmlsbD0iIzJBNzNDQyIgZD0iTTM3LjE4MSwxNS42NTdjLTEuMDMzLDAtMS45Ny0wLjEyLTIuODExLTAuMzZjLTAuODQxLTAuMjQtMS41NTktMC42MTktMi4xNTQtMS4xMzkKICAgIGMtMC41OTctMC41Mi0xLjA1Ny0xLjE4Mi0xLjM4MS0xLjk4NXMtMC40ODYtMS43NzEtMC40ODYtMi44OTlWMS43NTloNC43Mjd2Ny40NTVjMCwwLjg0NSwwLjIwMiwxLjQ1NywwLjYwNSwxLjgzOQogICAgYzAuNDA0LDAuMzgzLDAuOTE3LDAuNTc0LDEuNTM5LDAuNTc0YzAuNjM2LDAsMS4xNTItMC4xNzgsMS41NS0wLjUzNWMwLjM5Ni0wLjM1NywwLjU5Ni0wLjk0OSwwLjU5Ni0xLjc4MVYxLjc1OWg0LjcyN3Y3LjQxNgogICAgYzAsMS4xNjgtMC4xNjYsMi4xNjEtMC40OTcsMi45NzhjLTAuMzMxLDAuODE4LTAuNzk4LDEuNDg2LTEuMzk5LDIuMDA2Yy0wLjYwNCwwLjUyLTEuMzMxLDAuODk4LTIuMTg2LDEuMTM5CiAgICBDMzkuMTU2LDE1LjUzNywzOC4yMTMsMTUuNjU3LDM3LjE4MSwxNS42NTd6Ii8+CjwvZz4KPC9zdmc+" alt="Coursera">
+      </a>
+      <a tabindex="2" href="https://www.coursera.org/" class="Michigan">
+        <img class="Michigan-logo" src="UM-logo-for-Coursera.jpg" alt="University of Michigan logo">
+      </a>
+
+      <div tabindex="3" class="dropdown">
+        <span class="dropdown-btn">Explore <i class='arrow-down'></i></span>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="https://www.coursera.org/browse/arts-and-humanities">Arts and Humanities</a> <i class='li-arrow-left'></i></li>
+            <li><a href="https://www.coursera.org/browse/business">Business</a> <i class='li-arrow-left'></i></li>
+            <li><a href="https://www.coursera.org/browse/computer-science">Computer Science</a> <i class='li-arrow-left'></i></li>
+            <li><a href="https://www.coursera.org/browse/data-science">Data Science</a> <i class='li-arrow-left'></i></li>
+            <li><a href="https://www.coursera.org/browse/information-technology">Information Technology</a> <i class='li-arrow-left'></i></li>
+            <li><a href="https://www.coursera.org/browse/health">Health</a> <i class='li-arrow-left'></i></li>
+            <li><a href="https://www.coursera.org/browse/math-and-logic">Math and Logic</a> <i class='li-arrow-left'></i></li>
+            <li><a href="https://www.coursera.org/browse/personal-development">Personal Development</a> <i class='li-arrow-left'></i></li>
+            <li><a href="https://www.coursera.org/browse/physical-science-and-engineering">Physical Science and Engineering</a> <i class='li-arrow-left'></i></li>
+            <li><a href="https://www.coursera.org/browse/social-sciences">Social Sciences</a> <i class='li-arrow-left'></i></li>
+            <li><a href="https://www.coursera.org/browse/language-learning">Language Learning</a> <i class='li-arrow-left'></i></li>
+          </ul>
+          <br>
+          <ul >
+            <li>Degrees <i class='li-arrow-left'></i></li>
+            <li>Certificates <i class='li-arrow-left'></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="search-bar">
+        <input type="search" placeholder="What do you want to learn?">
+        <button class="search" type="submit" name="search"><i class="fa fa-search"></i></button>
+      </div>
+
+    </header>
+
+    <div class="navigation">
+      <span class="nav">
+        <a href="https://www.coursera.org/learn/introcss/home/welcome">Introduction to CSS3</a>
+      </span>
+      <i class='arrow-left'></i>
+
+      <span class="nav">
+        <a href="https://www.coursera.org/learn/introcss/home/week/3">Week 3</a>
+      </span>
+      <i class='arrow-left'></i>
+
+      <span class="nav">
+        03-01 Pseudo Classes and Elements
+      </span>
+
+      <div class="prev-nxt">
+        <span class="prev">
+          <a href="https://www.coursera.org/learn/introcss/supplement/C9NkD/resources">Prev</a>
+        </span>
+        <span class="nxt">
+          <a href="https://www.coursera.org/learn/introcss/lecture/JmJhE/03-02-transitions">Next</a>
+        </span>
+      </div>
+
+    </div>
+
+    <section id="main">
+      <div class="video-container">
+        <h2 class="video-name">03-01 Pseudo Classes and Elements</h2>
+
+        <video src="03-01_Pseudo_Classes_and_Elements.webm" poster="posterimage.jpg" controls>
+          Your browser dose not support video tag.
+        </video>
+
+        <div class="toolbar">
+          <span id="save">
+            <i id="save_note" class="far fa-sticky-note"></i>
+            Save Note
+          </span>
+
+          <span>
+            <i id="external_link" class="fas fa-external-link-alt"></i>
+            <a href="https://www.coursera.org/learn/introcss/discussions/weeks/3">Discuss</a>
+          </span>
+
+          <span id="download">
+            <a href="https://d3c33hcgiwev3.cloudfront.net/8_0sRHLpEeWcehImKNcI6w.processed/full/360p/index.mp4?Expires=1603670400&Signature=ZzrTElfPeHxedS5R6~PcuZ~kxbqIcw03Z9vjCHRhEJEIio6ULZxYEsMQ1QFA4Kc3F-AbkBLFlq7l4xs14IdmnA77aZtcbGjWOgnhMPLKe4NKO5rSWu~CoEjCDFryM9O4BH1jJLZAd0wdf-waKViNRQWSQj9lQ1abGF-bimpljCs_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A">
+              Download
+            </a>
+          </span>
+        </div>
+
+        <div class="trasnscript_toolbar">
+          <label for="select_language">
+            <div class="language_button">
+              <span>
+                English
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </div>
+          </label>
+
+          <div class="language_box">
+            <span>Select a language</span>
+            <span>Albanian</span>
+            <span>English</span>
+            <span>Serbian</span>
+            <span>Slovak</span>
+            <span>Tamil</span>
+            <span>Turkish</span>
+          </div>
+
+          <span class="translate">
+            <a href="https://www.coursera.org/learn/introcss/lecture/jE7LQ/03-01-pseudo-classes-and-elements#">Help Us Translate</a>
+          </span>
+        </div>
+
+        <div class="trasnscript">
+          <p><span>0:08</span>Welcome back everybody. Today we're going to talk very briefly about pseudo classes and elements.
+            So we've been working with different types of elements throughout this entire course, and how we
+            can structure them and style them. Well, pseudo elements are kind of different from the other things
+            we've seen before in that they are very dependent on the DOM structure, and some of them are actually
+            dynamically populated. So, to be honest, you have seen this before back when we talked about styling
+            links because the links had those different states. One example we used was the idea of hover. If you
+            hover a link, you can change the style to get rid of maybe the underline or change the color. So,
+            let's talk about some of these different types of pseudo-classes beyond what you can do with just a
+            link. I started off with the one we've seen before. You can have a link and also a link that's been
+            visited. You can also react to different user actions. So, if someone's hovering over a paragraph or
+            hovering over an H1 tag, you can still react to it. It doesn't just have to be a link. You can also
+            have active, and active is when you're holding the mouse button down over some sort of element. And the
+            last one is focus. Focus would be when someone's tabbing through the page you can put focus down on each
+            one of these. Finally, one that makes a lot of sense and you've probably seen before is that you can dial
+            the pseudo-classes of forms or interfaces. If the check box has been clicked or checked off, you can
+            see that sometimes they make it yellow. Or if you've ever been to a site and you're not allowed to type
+            something in until you type something in a box above, higher in, they tend to gray it out. So the way you
+            would go ahead and do this is you could say, you know what? If someone hovers over my paragraph, I want to
+            just do a border. Border:1 px. Now, even though there's no place on the DOM where they have p:hover, it
+            should work for you when you put that styling rule in.
+          </p>
+
+          <p><span>2:05</span>So, you can also style based on the structural position of the different elements. You have first-child,
+            last-child, nth-child. The way that one works is you put a number in to say the fifth child or the tenth
+            child. You can have only child. You also have other different things such as first-of-type, last-of-type,
+            only-of-type. And again, you just have the element, the colon, and then the name of the pseudo-class that
+            you want to style. Pseudo elements aren't necessarily part of the DOM, but they can be used to style
+            specific or unique parts of the page. So, some examples might if you have a paragraph and you wanna put in
+            that fancy first letter with a different font, you can use the first letter pseudo element. Same with the
+            first line, you can generate things to show up before or after elements. A lot of times if you're styling
+            something like credit card information, you can go ahead and put in the different types of credit cards but
+            have a little before that says, and hey, put a picture in here. You can also style just fragments of
+            different selections.
+          </p>
+
+          <p><span>3:07</span>Now I didn't give you much code when we went through here because really using pseudo classes and pseudo
+            elements is very unique to the page you're going to make. So later when we talk about tables, keep an eye
+            out because I'm going to be using a lot of pseudo classes and pseudo elements there. It's really important
+            to realize that I'm not going to be able to cover every combination of everything we learn about. But I
+            do want to give you the tools so that you can go out and investigate how you can add some cool new styles
+            to your page. Good luck.
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle-sidebar-btn">
+        <label for="toggle-sidebar" id="bars">
+          <i class="fas fa-bars"></i>
+        </label>
+      </div>
+
+      <div class="sidebar">
+        <h3>Advanced Ideas</h3>
+        <div class="contents">
+          <ul>
+            <li class="reading"></i> <a href="https://www.coursera.org/learn/introcss/supplement/C9NkD/resources"><b>Reading:</b> Resources <span>1 min</span></a> </li>
+            <li class="video" id="current"></i> <a href="https://www.coursera.org/learn/introcss/lecture/jE7LQ/03-01-pseudo-classes-and-elements#main"><b>Video:</b> 03-01 Pseudo Classes and Elements <span>3 min</span></a> </li>
+            <li class="video"></i> <a href="https://www.coursera.org/learn/introcss/lecture/JmJhE/03-02-transitions"><b>Video:</b> 03-02 Transitions <span>5 min</span></a> </li>
+            <li class="video"></i> <a href="https://www.coursera.org/learn/introcss/lecture/9rzOu/03-03-transforms"><b>Video:</b> 03-03 Transforms <span>5 min</span></a> </li>
+            <li class="reading"></i> <a href="https://www.coursera.org/learn/introcss/supplement/kyViF/optional-readings-transitions-transforms-and-animation"><b>Reading:</b> OPTIONAL READINGS - Transitions, Transforms, and Animation <span>2 min</span></a> </li>
+            <li class="video"></i> <a href="https://www.coursera.org/learn/introcss/lecture/iJzUX/03-04-code-together-transitions"><b>Video:</b> 03-04 Code together - Transitions <span>4 min</span></a> </li>
+            <li class="reading"></i> <a href="https://www.coursera.org/learn/introcss/supplement/54HHP/positioning"><b>Reading:</b> Positioning <span>2 min</span></a> </li>
+            <li class="video"></i> <a href="https://www.coursera.org/learn/introcss/lecture/f1qY2/03-05-positioning"><b>Video:</b> 03-05 Positioning <span>10 min</span></a> </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="toggle-notes-btn">
+        <label for="toggle-notes" id="file-icon">
+          <i class="far fa-file-alt"></i>
+        </label>
+      </div>
+
+      <div class="notes">
+        <h3>Notes</h3>
+        <img src="notes.jpg">
+        <p>Click the “Save Note” button when you want to capture a screen.
+          You can also highlight and save lines from the transcript below.
+          Add your own notes to anything you’ve captured.</p>
+      </div>
+
+
+    </section>
+
+  </body>
+</html>

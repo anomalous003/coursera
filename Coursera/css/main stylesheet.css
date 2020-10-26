@@ -1,0 +1,415 @@
+#main{
+  position: absolute;
+  top: 105px;
+  display: flex;
+}
+
+@media (max-width:1200px) {
+  #main{
+    position: absolute;
+    top: 100px;
+    display: flex;
+  }
+}
+
+/* Video container style*/
+div.video-container{
+  order: 3;
+  text-align: center;
+  margin-left: 37px;
+  margin-right: 37px;
+  transition-property: all;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+}
+
+/* Video container heading*/
+div.video-container h2.video-name{
+  color:rgb(55, 58, 60);
+  font-family: Calibri, Arial, sans-serif;
+  text-align: left;
+  font-weight: 500;
+  font-size: x-large;
+  margin-top: 2%;
+  margin-left: 1%;
+  padding-left: 9%;
+}
+
+/* Video container video*/
+div.video-container video{
+  width: 80%;
+}
+
+/* Video container paragraph*/
+div.video-container div.trasnscript p{
+  display: flex;
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 12%;
+  color: rgb(55, 58, 60);
+  font-size: 17px;
+  line-height: 24px;
+  font-family:  Calibri, Arial, sans-serif;
+}
+
+div.video-container div.trasnscript  p span{
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+/* Sidebar style*/
+div.sidebar{
+  order: 1;
+  position: fixed;
+  width: 245px;
+  height: 565px;
+  left: -100%;
+  background-color: white;
+  overflow-y: scroll;
+  transition-property: all;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+}
+
+/* styling Sidebar heading*/
+div.sidebar h3{
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 13px;
+  margin-left: 15px;
+  font-weight: 700;
+}
+
+/* positioning sidebar list*/
+div.contents ul{
+  margin-bottom: 30px;
+}
+
+/* styling Sidebar contents*/
+div.contents ul li{
+  border-left: 6px solid white;
+  padding: 8px 24px 8px 40px;
+}
+
+/* styling current Sidebar list item*/
+#current{
+  border-left: 6px solid #2a72cc;
+  background-color: #f7f7f7
+}
+
+/* styling Sidebar links*/
+div.contents ul li a{
+  color: rgb(55, 58, 60);
+  text-decoration: none;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 15px;
+}
+
+div.contents ul li span{
+  display: block;
+  margin: 1px;
+}
+
+/* adding playing icon*/
+div.contents ul li.video{
+  background-image: url(play_button.png);
+  background-repeat: no-repeat;
+}
+
+/* adding playing icon*/
+div.contents ul li.reading{
+  background-image: url(reading.png);
+  background-repeat: no-repeat;
+}
+
+/* positioning icons and adding space*/
+div.contents ul li.video, div.contents ul li.reading{
+  background-position-x: 12px;
+  background-position-y: 8px;
+  margin-bottom: 5px;
+}
+
+/* styling sidebar list when hover*/
+div.contents ul li:hover{
+  border-left: 6px solid #2a72cc;
+  background-color: #f7f7f7
+}
+
+/* styling sidebar list when focus*/
+div.contents ul li:focus{
+  border-left: 6px solid #2a72cc;
+  background-color: #f7f7f7
+}
+
+/* toggle sidebar button style*/
+div.toggle-sidebar-btn{
+  border: 1px solid #cccccc;
+  order: 2;
+  position: fixed;
+  left: 0%;
+  width: 35px;
+  height: 565px;
+  background-color: #f3f3f3;
+  box-shadow: 2px 0 6px #cccccc;
+  transition-property: all;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+}
+
+/*sidebar toggle icon*/
+#bars i{
+  color: #565656;
+  font-size: 22px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 33px;
+  text-align: center;
+}
+
+/*show sidebar when checked*/
+#toggle-sidebar:checked ~ * div.sidebar{
+  left: 0%;
+}
+
+/*move toggle sidebar button when checked*/
+#toggle-sidebar:checked ~ * div.toggle-sidebar-btn{
+  margin-left: 245px;
+}
+
+/*move video-container when checked*/
+#toggle-sidebar:checked ~ * div.video-container{
+  margin-left: 280px;
+}
+
+/*change background color of toggle sidebar button icon*/
+#toggle-sidebar:checked ~ * #bars i{
+  background-color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Notes style*/
+div.notes{
+  order: 5;
+  position: fixed;
+  right: -100%;
+  width: 307px;
+  height: 565px;
+  background-color: #fff;
+  text-align: center;
+  transition-property: all;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+}
+
+div.notes h3{
+  color: rgb(55, 58, 60);
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  text-align: left;
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+/* Notes paragraph style*/
+div.notes p{
+  color: #666;
+  text-align: left;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 30px 19px 0px 20px;
+}
+
+/* Notes button style*/
+div.toggle-notes-btn{
+  border: 1px solid #cccccc;
+  order: 4;
+  position: fixed;
+  right: 0%;
+  height: 565px;
+  width: 35px;
+  background-color: #f3f3f3;
+  box-shadow: -2px 0 6px #cccccc;
+  transition-property: all;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+}
+
+/*notes toggle icon*/
+#file-icon i{
+  color: #565656;
+  font-size: 22px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: inherit;
+  text-align: center;
+  width: 33px;
+}
+
+/*show notes when checked*/
+#toggle-notes:checked ~ * div.notes{
+  right: 0%;
+}
+
+#toggle-notes:checked ~ * div.toggle-notes-btn{
+  margin-right: 307px;
+}
+
+/*move video-container when checked*/
+#toggle-notes:checked ~ * div.video-container{
+  margin-right: 342px;
+}
+
+/*change background color of toggle notes button icon*/
+#toggle-notes:checked ~ * #file-icon i{
+  background-color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Hide checkbox*/
+#toggle-sidebar, #toggle-notes, #select_language{
+  display: none;
+}
+
+/*styling toolbar*/
+div.toolbar{
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: 1.1%;
+  padding-bottom: 1.2%;
+}
+
+/*styling toolbar spans*/
+div.toolbar span{
+  color: rgb(117, 117, 117);
+  cursor: pointer;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 17px;
+  margin-right: .5%;
+  border-radius: 3px;
+  padding: 6px 10px 6px 10px;
+  transition-property: background-color, color;
+  transition-delay: .2s;
+}
+
+/*styling toolbar links*/
+div.toolbar span a{
+  color: rgb(117, 117, 117);
+  cursor: pointer;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+  transition-property: background-color, color;
+  transition-delay: .2s;
+}
+
+/*styling external link and save note icon*/
+#external_link, #save_note{
+  color: rgb(117, 117, 117);
+  transition-property: background-color, color;
+  transition-delay: .2s;
+}
+
+/*styling save note*/
+#save{
+  margin-left: .5%;
+}
+
+/*adding background color to download button*/
+#download{
+  background-color: #efefef;
+}
+
+/*change color when hover*/
+div.toolbar span:hover, div.toolbar span:hover a, div.toolbar span:focus, div.toolbar span:focus a{
+  background-color: rgb(1, 86, 184);
+  color: #fff;
+}
+
+/*change color when hover*/
+div.toolbar #download:hover, div.toolbar #download:focus{
+  background-color: rgb(1, 86, 184);
+  color: #fff;
+}
+
+/*change color when hover*/
+div.toolbar span:hover #save_note, div.toolbar span:hover #external_link, div.toolbar span:focus #save_note, div.toolbar span:focus #external_link{
+  color: #fff;
+}
+
+/*styling trasnscript_toolbar button*/
+div.trasnscript_toolbar{
+  text-align: left;
+  margin-left: 11%;
+  margin-right: 20%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+/*styling trasnscript_toolbar button*/
+div.trasnscript_toolbar div.language_button{
+  background-color: #fff;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 1px;
+  color: rgb(55, 58, 60);
+  cursor: pointer;
+  font-family: Calibri, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 180px;
+  text-align: left;
+  display: inline-block;
+  padding-left: 5px;
+}
+
+/*styling arrow down*/
+div.language_button span i{
+  color: rgb(204, 204, 204);
+  margin-top: 3px;
+  float: right;
+  padding-right: 5px;
+}
+
+/*styling language box*/
+div.language_box{
+  display: none;
+  position: absolute;
+  border: 1px solid rgb(204, 204, 204);
+  width: 180px;
+}
+
+div.language_box span{
+  display: block;
+  background-color: #fff;
+  color: rgb(55, 58, 60);
+  cursor: pointer;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 15px;
+}
+
+/*styling translate*/
+div.trasnscript_toolbar .translate a{
+  float: right;
+  color: #2a73cc;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+/*showing language box when checked*/
+#select_language:checked ~ * div.language_box{
+  display: block;
+}
